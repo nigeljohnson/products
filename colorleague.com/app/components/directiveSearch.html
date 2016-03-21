@@ -1,0 +1,90 @@
+<div class="lib topblack">
+
+	<div class="componentHolder">
+
+		<div class="content searchComponent">
+
+		    <div
+		       ng-class="{'button': !isActive, 'button active': isActive}"
+		       ng-init="isActive = false"
+		       ng-click="isActive = !isActive">
+		        Click Me
+		    </div>
+
+			<a class="MuseoSansBold"
+				ng-class="{'': !contentIfActive, 'active': contentIfActive}"
+				ng-init="contentIfActive = true"
+				ng-click="contentIfActive = !contentIfActive"
+				>Preview
+			</a>
+
+		<div class="contentIf" ng-if="contentIfActive">
+			<p>contentIfActive</p>
+			<h1>{{blogtitle}}</h1>
+
+			<ul ng-repeat="peeps in peoples">
+				<p class="MuseoSansBold">{{peeps.name}}</p>
+				<p class="MuseoSansBold">{{peeps.comments}}</p>
+				<ul ng-repeat="commenter in peeps.comments">
+					<p>{{commenter.comment}}</p>
+				</ul>
+			</ul>
+		</div>
+
+		<div class="contentIf" ng-if="contentIfActive">
+
+
+			    <div
+			       ng-click="Activefirst = !Activefirst">
+			        first
+			    </div>
+
+			    <div
+			       ng-click="Activesecond = !Activesecond">
+			        second
+			    </div>
+
+			    <div ng-if="Activefirst">
+			    	<p>First Div</p>
+			    </div>
+
+			    <div ng-if="Activesecond">
+			    	<p>Second Div</p>
+			    </div>
+
+			<input type="text" ng-model="search"></input>
+
+			<ul ng-repeat="peeps in peoples | filter:search">
+
+				<li ui-sref="{{peeps.link}}">
+					<div class="gridThird">
+
+						<div class="gridItemPreview">
+							<div class="gridItem"><img ng-src="{{peeps.img}}" alt="Description"/></div>
+							<div class="gridItemInfo">
+								<div class="row">
+									<p class="MuseoSansBold">{{peeps.name}}</p>
+									<div class="priceTag MuseoSansBold">{{peeps.price}}</div>
+
+								</div>
+								<div class="row">
+									<div class="profileTag MuseoSansBold">O</div>
+									<p class="MuseoSans">by <b class="MuseoSansBold">{{peeps.name}}</b> in {{peeps.category}}</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</li>
+
+			</ul>
+
+
+		</div>
+
+
+
+		</div>
+
+	</div>
+</div>

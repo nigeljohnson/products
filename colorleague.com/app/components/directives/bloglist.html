@@ -1,0 +1,207 @@
+<div class="lib topblack">
+
+	<div class="componentHolder">
+
+		<div class="componentNav">
+			<div class="content MuseoSans">
+
+				<a class="MuseoSansBold"
+				ng-class="{'': !contentIfActive, 'active': contentIfActive}"
+				ng-init="contentIfActive = true"
+				ng-click="contentIfActive = !contentIfActive"
+				>Preview
+				</a>
+
+				<a class="MuseoSansBold"
+				ng-class="{'': !content2IfActive, 'active': content2IfActive}"
+				ng-init="content2IfActive = false"
+				ng-click="content2IfActive = !content2IfActive"
+				>Details
+				</a>
+
+				<a class="MuseoSansBold"
+				ng-class="{'': !content3IfActive, 'active': content3IfActive}"
+				ng-init="content3IfActive = false"
+				ng-click="content3IfActive = !content3IfActive"
+				>Comments
+				</a>
+
+				<a class="MuseoSansBold"
+				ng-class="{'': !content4IfActive, 'active': content4IfActive}"
+				ng-init="content4IfActive = false"
+				ng-click="content4IfActive = !content4IfActive"
+				>Related
+				</a>
+
+			</div>
+		</div>
+
+		<div class="contentIf" ng-if="contentIfActive">
+			<p>contentIfActive</p>
+
+		<h1>{{blogtitle}}</h1>
+
+		<ul ng-repeat="peeps in peoples">
+			<p class="MuseoSansBold">{{peeps.name}}</p>
+			<p class="MuseoSansBold">{{peeps.comments}}</p>
+
+			<ul ng-repeat="commenter in peeps.comments">
+				<p>{{commenter.comment}}</p>
+			</ul>
+		</ul>
+
+		</div>
+
+		<div class="contentIf" ng-if="content2IfActive">
+			<p>contentIf2Active</p>
+		</div>
+
+		<div class="contentIf" ng-if="content3IfActive">
+			<p>contentIf3Active</p>
+		</div>
+
+		<div class="contentIf" ng-if="content4IfActive">
+			<p>contentIf4Active</p>
+		</div>
+
+		<div class="contentFeatureTop">
+			<img class="blogsvg" src="{{blogimageSrc}}">
+			<img class="blogsvgiPhone" src="{{blogimageSrciPhone}}">
+			<img class="blogsvgiPad" src="{{blogimageSrciPad}}">
+		</div>
+
+		<div class="contentFeatureLabel">
+			<div class="gridFourth">
+			</div>
+			<div class="gridFourth">
+			</div>
+			<div class="gridFourth">
+			</div>
+			<div class="gridFourth">
+			</div>
+		</div>
+
+		<div class="contentIf">
+
+			<div class="contentFull">
+				<div class="contentContainer bothbg">
+					<p>{{blogDescription}}</p>
+				</div>
+			</div>
+
+			<div class="contentOneFourth">
+				<div class="contentColumn">
+					<div class="contentContainer">
+					<p>Sidebar</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="contentThreeFourth">
+				<div class="contentColumn">
+					<div class="contentContainer">
+
+					<h6>{{blogDate}}</h6> <h6>{{blogComments.length}}</h6>
+					<h1>{{blogtitle}}</h1>
+					<h2>{{blogDescription}}</h2>
+
+					<h3>This Project Details Title</h3>
+
+					<p>If you’re developing an online store with plenty of products, in all likelihood you’ve been asked to work on this feature: the comparison table. The standard approach, that works in most cases, is to use a simple HTML table element. If you have 6+ products to compare, though, things can get tricky, particularly when you try to make the whole thing responsive.</p>
+			<pre>
+
+var list = ['apple', 'pineapples', 'kiwi']
+
+list[0] = apples;
+
+for (setup, comparison, change) {
+	return
+}
+
+			</pre>
+
+			<pre>
+
+// initialize array
+var arr = [
+    "Hi",
+    "Hello",
+    "Bonjour"
+];
+
+// append new value to the array
+arr.push("Hola");
+
+// append multiple values to the array
+arr.push("Salut", "Hey");
+
+// display all values
+for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+			</pre>
+
+			<pre>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var energy = fruits.join();
+The result of energy will be:
+
+Banana,Orange,Apple,Mango
+			</pre>
+
+			<pre>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+	function myFunction() {
+	    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	    var x = document.getElementById("demo");
+	    x.innerHTML = fruits.join();
+	}
+</script>
+
+
+			</pre>
+
+			<pre>
+				
+var foodItems = ['apple', 'kiwi', 'orange', 'pineapple'];
+
+var nestedKiwi = { 
+    "stuff": {
+        "onetype": [
+            {"id":1,"name":"John Doe"},
+            {"id":2,"name":"Don Joeh"}
+        ],
+        "othertype": {"id":2,"company":"ACME"}
+    }, 
+    "otherstuff": {
+        "thing": [[1,42],[2,2]]
+     }
+}
+
+console.log(nestedKiwi.stuff.onetype[0].id);
+console.log(nestedKiwi.stuff.othertype.id);
+console.log(nestedKiwi.otherstuff.thing[0][1]);
+console.log(foodItems[2]);
+
+var joninedArry = foodItems.join(' and ');
+
+console.log(joninedArry);
+
+
+			</pre>
+
+
+			- ng-include vs nested views
+			</div>
+			</div>
+			</div>
+		</div>
+
+	</div>
+</div>

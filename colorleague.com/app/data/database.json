@@ -1,0 +1,8 @@
+{
+	"records": [
+	{
+		"name":"Nigel",
+		"age":"25",
+		"image": "../img/product1.JPG"
+	}]
+}

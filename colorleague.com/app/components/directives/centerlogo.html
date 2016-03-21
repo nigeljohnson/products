@@ -1,0 +1,99 @@
+<div class="lib topyellow"
+		ng-class="{	
+					'': !contentBgIfActive,
+					'StartActive': contentBgIfActive,
+					'': !contentStoryIfActive,
+					'StoryActive': contentStoryIfActive}">
+
+	<div class="componentHolder">
+		<div class="floor"></div>
+
+		<div class="lightBulb"
+			ng-class="{'button': !lightisActive, 'button active': lightisActive}"
+			ng-init="lightisActive = false"
+			ng-click="lightisActive = !lightisActive"
+			>
+			<img class="svg lightOn" src="/assets/svg/light.svg">
+			<img class="svg lightOff" src="/assets/svg/lightOff.svg">
+		</div>
+
+		<div class="lightBulb"
+			ng-class="{'button': !secondlightisActive, 'button active': secondlightisActive}"
+			ng-init="secondlightisActive = false"
+			ng-click="secondlightisActive = !secondlightisActive"
+			>
+			<img class="svg lightOn" src="/assets/svg/light.svg">
+			<img class="svg lightOff" src="/assets/svg/lightOff.svg">
+		</div>
+
+		<div class="lightBulb"
+			ng-class="{'button': !thirdlightisActive, 'button active': thirdlightisActive}"
+			ng-init="thirdlightisActive = true"
+			ng-click="thirdlightisActive = !thirdlightisActive"
+			>
+			<img class="svg lightOn" src="/assets/svg/light.svg">
+			<img class="svg lightOff" src="/assets/svg/lightOff.svg">
+		</div>
+
+		<div class="lightBulb"
+			ng-class="{'button': !fourlightisActive, 'button active': fourlightisActive}"
+			ng-init="fourlightisActive = true"
+			ng-click="fourlightisActive = !fourlightisActive"
+			>
+			<img class="svg lightOn" src="/assets/svg/light.svg">
+			<img class="svg lightOff" src="/assets/svg/lightOff.svg">
+		</div>
+
+
+		<div class="centercontainer homeBrand">
+			<h3 class="MuseoSans">Click the lights, please.</h3>
+			<img class="brand svg" src="/assets/svg/brand.svg">
+			<div class="row">
+
+				<div
+					class="button MuseoSansBold"
+					ng-class="{'': !contentStoryIfActive, 'StoryActive': contentStoryIfActive}"
+					ng-init="contentStoryIfActive = false"
+					ng-click="contentStoryIfActive = !contentStoryIfActive">
+					<p>About Us</p>
+				</div>
+
+				<div
+					class="button MuseoSansBold"
+					ng-class="{'': !contentBgIfActive, 'StartActive': contentBgIfActive}"
+					ng-init="contentBgIfActive = false"
+					ng-click="contentBgIfActive = !contentBgIfActive">
+					<p>Start Here</p>
+				</div>
+
+			</div>
+		</div>
+
+		<img class="tableFar svg" src="/assets/svg/tableFar.svg">
+		<img class="doorFar svg" src="/assets/svg/doorFar.svg">
+
+
+		<img class="tableMidLeft svg" src="/assets/svg/tableMid.svg">
+		<img class="tableMidRight svg" src="/assets/svg/tableMid.svg">
+
+		<img
+		ng-class="{'': !isActive, 'tablezoom': isActive}"
+		ng-init="isActive = false"
+		ng-click="isActive = !isActive"
+		class="table svg" src="/assets/svg/table.svg">
+
+	</div>
+
+	<div class="offScreen">
+		
+		<div
+			class="button MuseoSansBold"
+			ng-class="{'': !contentStoryIfActive, 'StoryActive': contentStoryIfActive}"
+			ng-init="contentStoryIfActive = false"
+			ng-click="contentStoryIfActive = !contentStoryIfActive">
+			<p>close</p>
+		</div>
+
+	</div>
+
+</div>

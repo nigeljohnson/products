@@ -1,0 +1,26 @@
+<div class="header">
+
+	<div class="left navigation">
+		<img ui-sref="searchResults" class="logo svg" src="/assets/svg/logo.svg">
+		<a ui-sref="detailsPage">Home</a>
+		<a ui-sref="detailsPage">Category</a>
+		<a ui-sref="diffResults">Diff</a>
+		<a ui-sref="searchPage">Search</a>
+		<a ui-sref="component-blog">blog</a>
+	</div>
+	
+	<div class="right navigation">
+		<a ui-sref="detailsPage">Details</a>
+	    <a ui-sref="projectsPage">Projects</a>
+	    <a ui-sref="component-nigel">Nigel</a>
+	    <a class="menuClick"
+		   ng-class="{'': !contentBgIfActive, 'StartActive': contentBgIfActive}"
+		   ng-init="contentBgIfActive = false"
+		   ng-click="contentBgIfActive = !contentBgIfActive"
+		   >Log In
+		</a>
+	    <a class="menuClick" href="#">Sign Up</a>
+	    <a class="menuClick" href="#">+</a>
+    </div>
+
+</div>
